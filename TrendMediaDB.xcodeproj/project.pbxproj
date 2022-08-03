@@ -17,6 +17,12 @@
 		C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497CC2899F8A000F7D548 /* APIKey.swift */; };
 		C13497CF2899F9C300F7D548 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497CE2899F9C300F7D548 /* Constant.swift */; };
 		C13497D32899FABB00F7D548 /* Example1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497D22899FABB00F7D548 /* Example1.swift */; };
+		C1E8F78C289A6D1C0098E93D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F78B289A6D1C0098E93D /* Alamofire */; };
+		C1E8F78F289A6D380098E93D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F78E289A6D380098E93D /* SwiftyJSON */; };
+		C1E8F792289A72900098E93D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F791289A72900098E93D /* Kingfisher */; };
+		C1E8F795289A73690098E93D /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F793289A73690098E93D /* InfoTableViewCell.swift */; };
+		C1E8F796289A73690098E93D /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E8F794289A73690098E93D /* InfoTableViewCell.xib */; };
+		C1E8F799289A778C0098E93D /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,9 @@
 		C13497CC2899F8A000F7D548 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		C13497CE2899F9C300F7D548 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C13497D22899FABB00F7D548 /* Example1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1.swift; sourceTree = "<group>"; };
+		C1E8F793289A73690098E93D /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		C1E8F794289A73690098E93D /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
+		C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E8F792289A72900098E93D /* Kingfisher in Frameworks */,
+				C1E8F78F289A6D380098E93D /* SwiftyJSON in Frameworks */,
+				C1E8F78C289A6D1C0098E93D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,11 +77,14 @@
 		C13497B32899F6CE00F7D548 /* TrendMediaDB */ = {
 			isa = PBXGroup;
 			children = (
+				C1E8F797289A770B0098E93D /* Protocol */,
 				C13497D12899FA9800F7D548 /* Key */,
 				C13497B42899F6CE00F7D548 /* AppDelegate.swift */,
 				C13497B62899F6CE00F7D548 /* SceneDelegate.swift */,
 				C13497B82899F6CE00F7D548 /* ViewController.swift */,
 				C13497BA2899F6CE00F7D548 /* Main.storyboard */,
+				C1E8F793289A73690098E93D /* InfoTableViewCell.swift */,
+				C1E8F794289A73690098E93D /* InfoTableViewCell.xib */,
 				C13497BD2899F6CF00F7D548 /* Assets.xcassets */,
 				C13497BF2899F6CF00F7D548 /* LaunchScreen.storyboard */,
 				C13497C22899F6CF00F7D548 /* Info.plist */,
@@ -85,6 +100,14 @@
 				C13497D22899FABB00F7D548 /* Example1.swift */,
 			);
 			path = Key;
+			sourceTree = "<group>";
+		};
+		C1E8F797289A770B0098E93D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +126,11 @@
 			dependencies = (
 			);
 			name = TrendMediaDB;
+			packageProductDependencies = (
+				C1E8F78B289A6D1C0098E93D /* Alamofire */,
+				C1E8F78E289A6D380098E93D /* SwiftyJSON */,
+				C1E8F791289A72900098E93D /* Kingfisher */,
+			);
 			productName = TrendMediaDB;
 			productReference = C13497B12899F6CE00F7D548 /* TrendMediaDB.app */;
 			productType = "com.apple.product-type.application";
@@ -131,6 +159,11 @@
 				Base,
 			);
 			mainGroup = C13497A82899F6CE00F7D548;
+			packageReferences = (
+				C1E8F78A289A6D1C0098E93D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C1E8F78D289A6D380098E93D /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				C1E8F790289A72900098E93D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C13497B22899F6CE00F7D548 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E8F796289A73690098E93D /* InfoTableViewCell.xib in Resources */,
 				C13497C92899F7CC00F7D548 /* .gitignore in Resources */,
 				C13497C12899F6CF00F7D548 /* LaunchScreen.storyboard in Resources */,
 				C13497BE2899F6CF00F7D548 /* Assets.xcassets in Resources */,
@@ -163,6 +197,8 @@
 				C13497D32899FABB00F7D548 /* Example1.swift in Sources */,
 				C13497B52899F6CE00F7D548 /* AppDelegate.swift in Sources */,
 				C13497B72899F6CE00F7D548 /* SceneDelegate.swift in Sources */,
+				C1E8F795289A73690098E93D /* InfoTableViewCell.swift in Sources */,
+				C1E8F799289A778C0098E93D /* ReusableViewProtocol.swift in Sources */,
 				C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */,
 				C13497CF2899F9C300F7D548 /* Constant.swift in Sources */,
 			);
@@ -380,6 +416,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1E8F78A289A6D1C0098E93D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C1E8F78D289A6D380098E93D /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C1E8F790289A72900098E93D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1E8F78B289A6D1C0098E93D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1E8F78A289A6D1C0098E93D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C1E8F78E289A6D380098E93D /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1E8F78D289A6D380098E93D /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		C1E8F791289A72900098E93D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1E8F790289A72900098E93D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C13497A92899F6CE00F7D548 /* Project object */;
 }
