@@ -14,8 +14,9 @@
 		C13497BE2899F6CF00F7D548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13497BD2899F6CF00F7D548 /* Assets.xcassets */; };
 		C13497C12899F6CF00F7D548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13497BF2899F6CF00F7D548 /* LaunchScreen.storyboard */; };
 		C13497C92899F7CC00F7D548 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C13497C82899F7CC00F7D548 /* .gitignore */; };
-		C13497CB2899F81F00F7D548 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497CA2899F81F00F7D548 /* SearchViewController.swift */; };
 		C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497CC2899F8A000F7D548 /* APIKey.swift */; };
+		C13497CF2899F9C300F7D548 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497CE2899F9C300F7D548 /* Constant.swift */; };
+		C13497D32899FABB00F7D548 /* Example1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497D22899FABB00F7D548 /* Example1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +29,9 @@
 		C13497C02899F6CF00F7D548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C13497C22899F6CF00F7D548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C13497C82899F7CC00F7D548 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		C13497CA2899F81F00F7D548 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C13497CC2899F8A000F7D548 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		C13497CE2899F9C300F7D548 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		C13497D22899FABB00F7D548 /* Example1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		C13497B32899F6CE00F7D548 /* TrendMediaDB */ = {
 			isa = PBXGroup;
 			children = (
+				C13497D12899FA9800F7D548 /* Key */,
 				C13497B42899F6CE00F7D548 /* AppDelegate.swift */,
 				C13497B62899F6CE00F7D548 /* SceneDelegate.swift */,
 				C13497B82899F6CE00F7D548 /* ViewController.swift */,
@@ -70,10 +73,18 @@
 				C13497BD2899F6CF00F7D548 /* Assets.xcassets */,
 				C13497BF2899F6CF00F7D548 /* LaunchScreen.storyboard */,
 				C13497C22899F6CF00F7D548 /* Info.plist */,
-				C13497CA2899F81F00F7D548 /* SearchViewController.swift */,
 				C13497CC2899F8A000F7D548 /* APIKey.swift */,
+				C13497CE2899F9C300F7D548 /* Constant.swift */,
 			);
 			path = TrendMediaDB;
+			sourceTree = "<group>";
+		};
+		C13497D12899FA9800F7D548 /* Key */ = {
+			isa = PBXGroup;
+			children = (
+				C13497D22899FABB00F7D548 /* Example1.swift */,
+			);
+			path = Key;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +160,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13497B92899F6CE00F7D548 /* ViewController.swift in Sources */,
+				C13497D32899FABB00F7D548 /* Example1.swift in Sources */,
 				C13497B52899F6CE00F7D548 /* AppDelegate.swift in Sources */,
-				C13497CB2899F81F00F7D548 /* SearchViewController.swift in Sources */,
 				C13497B72899F6CE00F7D548 /* SceneDelegate.swift in Sources */,
 				C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */,
+				C13497CF2899F9C300F7D548 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
