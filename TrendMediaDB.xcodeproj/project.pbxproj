@@ -17,6 +17,9 @@
 		C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497CC2899F8A000F7D548 /* APIKey.swift */; };
 		C13497CF2899F9C300F7D548 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497CE2899F9C300F7D548 /* Constant.swift */; };
 		C13497D32899FABB00F7D548 /* Example1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497D22899FABB00F7D548 /* Example1.swift */; };
+		C13DBAD3289BE27B00236586 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13DBAD2289BE27B00236586 /* DetailTableViewController.swift */; };
+		C16618DC289C13A30050D5D1 /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16618DB289C13A30050D5D1 /* OverViewTableViewCell.swift */; };
+		C16618DE289C21330050D5D1 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16618DD289C21330050D5D1 /* CastTableViewCell.swift */; };
 		C1E8F78C289A6D1C0098E93D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F78B289A6D1C0098E93D /* Alamofire */; };
 		C1E8F78F289A6D380098E93D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F78E289A6D380098E93D /* SwiftyJSON */; };
 		C1E8F792289A72900098E93D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F791289A72900098E93D /* Kingfisher */; };
@@ -38,6 +41,9 @@
 		C13497CC2899F8A000F7D548 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		C13497CE2899F9C300F7D548 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C13497D22899FABB00F7D548 /* Example1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1.swift; sourceTree = "<group>"; };
+		C13DBAD2289BE27B00236586 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		C16618DB289C13A30050D5D1 /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
+		C16618DD289C21330050D5D1 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
 		C1E8F793289A73690098E93D /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		C1E8F794289A73690098E93D /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 		C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 				C13497B62899F6CE00F7D548 /* SceneDelegate.swift */,
 				C13497B82899F6CE00F7D548 /* ViewController.swift */,
 				C13497BA2899F6CE00F7D548 /* Main.storyboard */,
+				C16618DD289C21330050D5D1 /* CastTableViewCell.swift */,
+				C16618DB289C13A30050D5D1 /* OverViewTableViewCell.swift */,
+				C13DBAD2289BE27B00236586 /* DetailTableViewController.swift */,
 				C1E8F793289A73690098E93D /* InfoTableViewCell.swift */,
 				C1E8F794289A73690098E93D /* InfoTableViewCell.xib */,
 				C13497BD2899F6CF00F7D548 /* Assets.xcassets */,
@@ -194,10 +203,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13497B92899F6CE00F7D548 /* ViewController.swift in Sources */,
+				C13DBAD3289BE27B00236586 /* DetailTableViewController.swift in Sources */,
 				C13497D32899FABB00F7D548 /* Example1.swift in Sources */,
 				C13497B52899F6CE00F7D548 /* AppDelegate.swift in Sources */,
 				C13497B72899F6CE00F7D548 /* SceneDelegate.swift in Sources */,
 				C1E8F795289A73690098E93D /* InfoTableViewCell.swift in Sources */,
+				C16618DE289C21330050D5D1 /* CastTableViewCell.swift in Sources */,
+				C16618DC289C13A30050D5D1 /* OverViewTableViewCell.swift in Sources */,
 				C1E8F799289A778C0098E93D /* ReusableViewProtocol.swift in Sources */,
 				C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */,
 				C13497CF2899F9C300F7D548 /* Constant.swift in Sources */,
