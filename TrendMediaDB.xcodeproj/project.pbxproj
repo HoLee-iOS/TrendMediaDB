@@ -18,6 +18,7 @@
 		C13497CF2899F9C300F7D548 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497CE2899F9C300F7D548 /* Constant.swift */; };
 		C13497D32899FABB00F7D548 /* Example1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497D22899FABB00F7D548 /* Example1.swift */; };
 		C13DBAD3289BE27B00236586 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13DBAD2289BE27B00236586 /* DetailTableViewController.swift */; };
+		C1581AB7289D0A38009AA561 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1581AB6289D0A38009AA561 /* WebViewController.swift */; };
 		C16618DC289C13A30050D5D1 /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16618DB289C13A30050D5D1 /* OverViewTableViewCell.swift */; };
 		C16618DE289C21330050D5D1 /* CastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16618DD289C21330050D5D1 /* CastTableViewCell.swift */; };
 		C1E8F78C289A6D1C0098E93D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F78B289A6D1C0098E93D /* Alamofire */; };
@@ -42,6 +43,7 @@
 		C13497CE2899F9C300F7D548 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C13497D22899FABB00F7D548 /* Example1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example1.swift; sourceTree = "<group>"; };
 		C13DBAD2289BE27B00236586 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		C1581AB6289D0A38009AA561 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C16618DB289C13A30050D5D1 /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
 		C16618DD289C21330050D5D1 /* CastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewCell.swift; sourceTree = "<group>"; };
 		C1E8F793289A73690098E93D /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				C13497B62899F6CE00F7D548 /* SceneDelegate.swift */,
 				C13497B82899F6CE00F7D548 /* ViewController.swift */,
 				C13497BA2899F6CE00F7D548 /* Main.storyboard */,
+				C1581AB6289D0A38009AA561 /* WebViewController.swift */,
 				C16618DD289C21330050D5D1 /* CastTableViewCell.swift */,
 				C16618DB289C13A30050D5D1 /* OverViewTableViewCell.swift */,
 				C13DBAD2289BE27B00236586 /* DetailTableViewController.swift */,
@@ -209,6 +212,7 @@
 				C13497B72899F6CE00F7D548 /* SceneDelegate.swift in Sources */,
 				C1E8F795289A73690098E93D /* InfoTableViewCell.swift in Sources */,
 				C16618DE289C21330050D5D1 /* CastTableViewCell.swift in Sources */,
+				C1581AB7289D0A38009AA561 /* WebViewController.swift in Sources */,
 				C16618DC289C13A30050D5D1 /* OverViewTableViewCell.swift in Sources */,
 				C1E8F799289A778C0098E93D /* ReusableViewProtocol.swift in Sources */,
 				C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */,

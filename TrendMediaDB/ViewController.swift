@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     var backDrops: [URL] = []
     var overViews: [String] = []
     
+    var videos: [Int:String] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,8 +47,6 @@ class ViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: .plain, target: self, action: #selector(menuClicked))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchClicked))
         
-        
-        
         loadMedia()
     }
     
@@ -58,19 +58,6 @@ class ViewController: UIViewController {
         
     }
     
-    //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //        let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-    //
-    //                let label = UILabel()
-    //                label.frame = CGRect.init(x: 5, y: 5, width: headerView.frame.width-10, height: headerView.frame.height-10)
-    //                label.text = "2022/22/22"
-    //                label.font = .systemFont(ofSize: 16)
-    //                label.textColor = .yellow
-    //
-    //                headerView.addSubview(label)
-    //
-    //                return headerView
-    //    }
     
     func loadMedia() {
         
@@ -111,7 +98,7 @@ class ViewController: UIViewController {
                     self.overViews.append(f)
                     
                     self.loadCast(id: self.movieIds[self.movieIds.count - 1])
-                    
+                    self.loadVideo(id: self.movieIds[self.movieIds.count - 1])
                 }
                 
                 self.infoTableView.reloadData()
@@ -124,7 +111,7 @@ class ViewController: UIViewController {
         
     }
     
-    func loadCast(id:Int) {
+    func loadCast(id: Int) {
         
         var array1: [String] = []
         var array2: [URL] = []
@@ -182,6 +169,46 @@ class ViewController: UIViewController {
         
     }
     
+    func loadVideo(id: Int) {
+        
+        let url = "\(EndPoint.creditURL)\(MediaType.movie)/\(id)/videos?api_key=\(APIKey.TMDB)&language=en-US"
+        
+        AF.request(url, method: .get).validate(statusCode: 200...500).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                print(json)
+                
+                let video = json["results"][0]["key"].stringValue
+                self.videos.updateValue(video, forKey: id)
+                
+                self.infoTableView.reloadData()
+                
+            case .failure(let error):
+                print(error)
+                
+            }
+        }
+        
+    }
+    
+    @objc func linkButtonClicked(_ sender: UIButton) {
+        
+        let indexPathRow = sender.tag
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: WebViewController.resuseIdentifier) as! WebViewController
+        
+        if let i = videos[movieIds[indexPathRow]] {
+            vc.destinationURL = i
+        }
+        
+        vc.modalPresentationStyle = .fullScreen
+        
+        self.present(vc, animated: true)
+        
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -193,6 +220,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.resuseIdentifier, for: indexPath) as! InfoTableViewCell
+        
+        //링크버튼 속성
+        cell.linkButton.imageView?.image = UIImage(systemName: "paperclip")
+        cell.linkButton.imageView?.tintColor = .white
+        cell.linkButton.backgroundColor = .black
+        cell.linkButton.layer.cornerRadius = 15
+        
+        //링크버튼 클릭시 화면 이동
+        cell.linkButton.tag = indexPath.row
+        cell.linkButton.addTarget(self, action: #selector(linkButtonClicked(_:)), for: .touchUpInside)
         
         //미디어 이름
         cell.mediaName.text = titles[indexPath.row]
@@ -214,7 +251,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.castList.font = .systemFont(ofSize: 13)
         cell.castList.textColor = .lightGray
         cell.castList.numberOfLines = 1
-        
         
         
         if let actors = casts[movieIds[indexPath.row]] {
@@ -239,7 +275,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         300
     }
     
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
         let vc = sb.instantiateViewController(withIdentifier: DetailTableViewController.resuseIdentifier) as! DetailTableViewController
@@ -292,12 +330,13 @@ extension ViewController: UITableViewDataSourcePrefetching {
             }
         }
         
-//        print("===\(indexPaths)")
+        //        print("===\(indexPaths)")
     }
     
     func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
-//        print("===취소: \(indexPaths)")
+        //        print("===취소: \(indexPaths)")
     }
     
 }
+
 

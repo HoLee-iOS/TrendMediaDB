@@ -46,8 +46,6 @@ class DetailTableViewController: UITableViewController, ReusableViewProtocol {
         self.navigationController?.navigationBar.tintColor = .black
         navigationItem.title = "출연/제작"
         
-        
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

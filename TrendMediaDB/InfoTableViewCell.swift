@@ -9,6 +9,7 @@ import UIKit
 
 class InfoTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var mediaName: UILabel!
     @IBOutlet weak var castList: UILabel!
@@ -17,5 +18,7 @@ class InfoTableViewCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var detailButton: UIButton!
     @IBOutlet weak var seperateLine: UIView!
+    @IBOutlet weak var linkButton: UIButton!
+
     
 }
