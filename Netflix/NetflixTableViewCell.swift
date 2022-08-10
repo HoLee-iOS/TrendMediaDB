@@ -22,8 +22,8 @@ class NetflixTableViewCell: UITableViewCell {
     }
     
     func setUpUI() {
-        titleLabel.font = .boldSystemFont(ofSize: 24)
-        titleLabel.text = "넷플릭스 인기 콘텐츠"
+        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.textColor = .white
         titleLabel.backgroundColor = .clear
         
         contentCollectionView.backgroundColor = .clear

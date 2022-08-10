@@ -13,13 +13,14 @@ class ContentCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupUI()
     }
 
     func setupUI() {
         
         cardView.backgroundColor = .clear
-        cardView.posterImageView.backgroundColor = .systemRed
+//        cardView.posterImageView.backgroundColor = .systemRed
         cardView.posterImageView.layer.cornerRadius = 10
         
     }

@@ -12,7 +12,6 @@ class WebViewController: UIViewController, ReusableViewProtocol {
     
     static var resuseIdentifier: String = "WebViewController"
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var webView: WKWebView!
     
     var destinationURL: String = ""
@@ -21,6 +20,14 @@ class WebViewController: UIViewController, ReusableViewProtocol {
         super.viewDidLoad()
 
         openWebPage(url: EndPoint.videoURL + destinationURL)
+        
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(systemName: "xmark")
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(systemName: "xmark")
+        self.navigationController?.navigationBar.tintColor = .black
+        
+    }
+    
+    @objc func xButtonClicked() {
         
     }
     

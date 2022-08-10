@@ -24,6 +24,7 @@
 		C1AFEB1F28A251A9009DC268 /* ContentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AFEB1D28A251A9009DC268 /* ContentCollectionViewCell.swift */; };
 		C1AFEB2028A251A9009DC268 /* ContentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1AFEB1E28A251A9009DC268 /* ContentCollectionViewCell.xib */; };
 		C1AFEB2228A253D5009DC268 /* NetflixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AFEB2128A253D5009DC268 /* NetflixViewController.swift */; };
+		C1B387DB28A38E0A00DCC189 /* TMDBAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B387DA28A38E0A00DCC189 /* TMDBAPIManager.swift */; };
 		C1D9558C28A2499600AF4A2B /* NetflixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D9558B28A2499600AF4A2B /* NetflixTableViewCell.swift */; };
 		C1D9558E28A24C1E00AF4A2B /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1D9558D28A24C1E00AF4A2B /* CardView.xib */; };
 		C1D9559028A24ED900AF4A2B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D9558F28A24ED900AF4A2B /* CardView.swift */; };
@@ -55,6 +56,7 @@
 		C1AFEB1D28A251A9009DC268 /* ContentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCollectionViewCell.swift; sourceTree = "<group>"; };
 		C1AFEB1E28A251A9009DC268 /* ContentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCollectionViewCell.xib; sourceTree = "<group>"; };
 		C1AFEB2128A253D5009DC268 /* NetflixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixViewController.swift; sourceTree = "<group>"; };
+		C1B387DA28A38E0A00DCC189 /* TMDBAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIManager.swift; sourceTree = "<group>"; };
 		C1D9558B28A2499600AF4A2B /* NetflixTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixTableViewCell.swift; sourceTree = "<group>"; };
 		C1D9558D28A24C1E00AF4A2B /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		C1D9558F28A24ED900AF4A2B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		C13497A82899F6CE00F7D548 = {
 			isa = PBXGroup;
 			children = (
+				C1B387D928A38D5800DCC189 /* Network */,
 				C1CF0F0728A247C5001447F0 /* Netflix */,
 				C13497C82899F7CC00F7D548 /* .gitignore */,
 				C13497B32899F6CE00F7D548 /* TrendMediaDB */,
@@ -104,7 +107,6 @@
 				C13497B62899F6CE00F7D548 /* SceneDelegate.swift */,
 				C13497B82899F6CE00F7D548 /* ViewController.swift */,
 				C13497BA2899F6CE00F7D548 /* Main.storyboard */,
-				C1AFEB2128A253D5009DC268 /* NetflixViewController.swift */,
 				C1581AB6289D0A38009AA561 /* WebViewController.swift */,
 				C16618DD289C21330050D5D1 /* CastTableViewCell.swift */,
 				C16618DB289C13A30050D5D1 /* OverViewTableViewCell.swift */,
@@ -128,9 +130,18 @@
 			path = Key;
 			sourceTree = "<group>";
 		};
+		C1B387D928A38D5800DCC189 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C1B387DA28A38E0A00DCC189 /* TMDBAPIManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		C1CF0F0728A247C5001447F0 /* Netflix */ = {
 			isa = PBXGroup;
 			children = (
+				C1AFEB2128A253D5009DC268 /* NetflixViewController.swift */,
 				C1D9558B28A2499600AF4A2B /* NetflixTableViewCell.swift */,
 				C1AFEB1E28A251A9009DC268 /* ContentCollectionViewCell.xib */,
 				C1AFEB1D28A251A9009DC268 /* ContentCollectionViewCell.swift */,
@@ -243,6 +254,7 @@
 				C1581AB7289D0A38009AA561 /* WebViewController.swift in Sources */,
 				C16618DC289C13A30050D5D1 /* OverViewTableViewCell.swift in Sources */,
 				C1E8F799289A778C0098E93D /* ReusableViewProtocol.swift in Sources */,
+				C1B387DB28A38E0A00DCC189 /* TMDBAPIManager.swift in Sources */,
 				C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */,
 				C13497CF2899F9C300F7D548 /* Constant.swift in Sources */,
 				C1AFEB1F28A251A9009DC268 /* ContentCollectionViewCell.swift in Sources */,

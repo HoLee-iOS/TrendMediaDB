@@ -56,6 +56,10 @@ class ViewController: UIViewController {
     
     @objc func searchClicked() {
         
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: NetflixViewController.resuseIdentifier) as! NetflixViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     
@@ -64,7 +68,7 @@ class ViewController: UIViewController {
         //쿼리는 한글이 들어가면 에러가 남, 딕셔너리처럼 순서는 상관 없음
         //한글을 사용하지 못하는 이유는 한글이 utf-8로 인코딩되지 않았기 때문
         //아래와 같은 코드로 인코딩 처리가 가능함
-        let url = "\(EndPoint.movieURL)\(MediaType.movie)/\(TimeWindow.week)?api_key=\(APIKey.TMDB)&page=\(pages)"
+        let url = "\(EndPoint.movieURL)\(MediaType.movie)/\(TimeWindow.week)?api_key=\(APIKey.tmdb)&page=\(pages)"
         
         AF.request(url, method: .get).validate(statusCode: 200...500).responseJSON { response in
             switch response.result {
@@ -120,7 +124,7 @@ class ViewController: UIViewController {
         var array5: [URL] = []
         var array6: [String] = []
         
-        let url = "\(EndPoint.creditURL)\(MediaType.movie)/\(id)/credits?api_key=\(APIKey.TMDB)&language=en-US"
+        let url = "\(EndPoint.creditURL)\(MediaType.movie)/\(id)/credits?api_key=\(APIKey.tmdb)&language=en-US"
         
         AF.request(url, method: .get).validate(statusCode: 200...500).responseJSON { response in
             switch response.result {
@@ -171,7 +175,7 @@ class ViewController: UIViewController {
     
     func loadVideo(id: Int) {
         
-        let url = "\(EndPoint.creditURL)\(MediaType.movie)/\(id)/videos?api_key=\(APIKey.TMDB)&language=en-US"
+        let url = "\(EndPoint.creditURL)\(MediaType.movie)/\(id)/videos?api_key=\(APIKey.tmdb)&language=en-US"
         
         AF.request(url, method: .get).validate(statusCode: 200...500).responseJSON { response in
             switch response.result {
@@ -203,9 +207,7 @@ class ViewController: UIViewController {
             vc.destinationURL = i
         }
         
-        vc.modalPresentationStyle = .fullScreen
-        
-        self.present(vc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
