@@ -52,16 +52,19 @@ class ViewController: UIViewController {
     
     @objc func menuClicked() {
         
-    }
-    
-    @objc func searchClicked() {
-        
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: NetflixViewController.resuseIdentifier) as! NetflixViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
+    @objc func searchClicked() {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: MapViewController.resuseIdentifier) as! MapViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
     func loadMedia() {
         

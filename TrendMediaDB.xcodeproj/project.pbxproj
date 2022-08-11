@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10CE51828A500C300B9834D /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10CE51728A500C300B9834D /* Theater.swift */; };
+		C10CE51A28A500D400B9834D /* TheaterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10CE51928A500D400B9834D /* TheaterList.swift */; };
 		C13497B52899F6CE00F7D548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497B42899F6CE00F7D548 /* AppDelegate.swift */; };
 		C13497B72899F6CE00F7D548 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497B62899F6CE00F7D548 /* SceneDelegate.swift */; };
 		C13497B92899F6CE00F7D548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13497B82899F6CE00F7D548 /* ViewController.swift */; };
@@ -34,9 +36,12 @@
 		C1E8F795289A73690098E93D /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F793289A73690098E93D /* InfoTableViewCell.swift */; };
 		C1E8F796289A73690098E93D /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E8F794289A73690098E93D /* InfoTableViewCell.xib */; };
 		C1E8F799289A778C0098E93D /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */; };
+		C1F1626128A4E4A100F44947 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F1626028A4E4A100F44947 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C10CE51728A500C300B9834D /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		C10CE51928A500D400B9834D /* TheaterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterList.swift; sourceTree = "<group>"; };
 		C13497B12899F6CE00F7D548 /* TrendMediaDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendMediaDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13497B42899F6CE00F7D548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C13497B62899F6CE00F7D548 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		C1E8F793289A73690098E93D /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		C1E8F794289A73690098E93D /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
 		C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		C1F1626028A4E4A100F44947 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +85,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C10CE51628A5008600B9834D /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				C10CE51728A500C300B9834D /* Theater.swift */,
+				C10CE51928A500D400B9834D /* TheaterList.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
 		C13497A82899F6CE00F7D548 = {
 			isa = PBXGroup;
 			children = (
+				C10CE51628A5008600B9834D /* Struct */,
 				C1B387D928A38D5800DCC189 /* Network */,
 				C1CF0F0728A247C5001447F0 /* Netflix */,
 				C13497C82899F7CC00F7D548 /* .gitignore */,
@@ -107,6 +123,7 @@
 				C13497B62899F6CE00F7D548 /* SceneDelegate.swift */,
 				C13497B82899F6CE00F7D548 /* ViewController.swift */,
 				C13497BA2899F6CE00F7D548 /* Main.storyboard */,
+				C1F1626028A4E4A100F44947 /* MapViewController.swift */,
 				C1581AB6289D0A38009AA561 /* WebViewController.swift */,
 				C16618DD289C21330050D5D1 /* CastTableViewCell.swift */,
 				C16618DB289C13A30050D5D1 /* OverViewTableViewCell.swift */,
@@ -244,6 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C10CE51828A500C300B9834D /* Theater.swift in Sources */,
+				C10CE51A28A500D400B9834D /* TheaterList.swift in Sources */,
 				C13497B92899F6CE00F7D548 /* ViewController.swift in Sources */,
 				C13DBAD3289BE27B00236586 /* DetailTableViewController.swift in Sources */,
 				C13497D32899FABB00F7D548 /* Example1.swift in Sources */,
@@ -257,6 +276,7 @@
 				C1B387DB28A38E0A00DCC189 /* TMDBAPIManager.swift in Sources */,
 				C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */,
 				C13497CF2899F9C300F7D548 /* Constant.swift in Sources */,
+				C1F1626128A4E4A100F44947 /* MapViewController.swift in Sources */,
 				C1AFEB1F28A251A9009DC268 /* ContentCollectionViewCell.swift in Sources */,
 				C1D9558C28A2499600AF4A2B /* NetflixTableViewCell.swift in Sources */,
 				C1D9559028A24ED900AF4A2B /* CardView.swift in Sources */,
@@ -407,6 +427,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54R3763M9G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrendMediaDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -434,6 +455,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 54R3763M9G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrendMediaDB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
