@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
+import TrendMediaFramework
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var infoTableView: UITableView!
@@ -38,7 +40,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        infoTableView.register(UINib(nibName: InfoTableViewCell.resuseIdentifier, bundle: nil), forCellReuseIdentifier: InfoTableViewCell.resuseIdentifier)
+        infoTableView.register(UINib(nibName: InfoTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: InfoTableViewCell.reuseIdentifier)
         
         infoTableView.delegate = self
         infoTableView.dataSource = self
@@ -53,7 +55,7 @@ class ViewController: UIViewController {
     @objc func menuClicked() {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: NetflixViewController.resuseIdentifier) as! NetflixViewController
+        let vc = sb.instantiateViewController(withIdentifier: NetflixViewController.reuseIdentifier) as! NetflixViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -61,7 +63,7 @@ class ViewController: UIViewController {
     @objc func searchClicked() {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: MapViewController.resuseIdentifier) as! MapViewController
+        let vc = sb.instantiateViewController(withIdentifier: MapViewController.reuseIdentifier) as! MapViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -204,7 +206,7 @@ class ViewController: UIViewController {
         let indexPathRow = sender.tag
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: WebViewController.resuseIdentifier) as! WebViewController
+        let vc = sb.instantiateViewController(withIdentifier: WebViewController.reuseIdentifier) as! WebViewController
         
         if let i = videos[movieIds[indexPathRow]] {
             vc.destinationURL = i
@@ -224,7 +226,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.resuseIdentifier, for: indexPath) as! InfoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: InfoTableViewCell.reuseIdentifier, for: indexPath) as! InfoTableViewCell
         
         //링크버튼 속성
         cell.linkButton.imageView?.image = UIImage(systemName: "paperclip")
@@ -285,7 +287,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         
-        let vc = sb.instantiateViewController(withIdentifier: DetailTableViewController.resuseIdentifier) as! DetailTableViewController
+        let vc = sb.instantiateViewController(withIdentifier: DetailTableViewController.reuseIdentifier) as! DetailTableViewController
         
         vc.detailTitle = titles[indexPath.row]
         vc.detailPoster = posters[indexPath.row]

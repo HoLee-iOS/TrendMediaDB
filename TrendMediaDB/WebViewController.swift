@@ -8,9 +8,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, ReusableViewProtocol {
-    
-    static var resuseIdentifier: String = "WebViewController"
+class WebViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     

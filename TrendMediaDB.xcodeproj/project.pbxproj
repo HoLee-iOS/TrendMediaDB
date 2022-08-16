@@ -30,14 +30,50 @@
 		C1D9558C28A2499600AF4A2B /* NetflixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D9558B28A2499600AF4A2B /* NetflixTableViewCell.swift */; };
 		C1D9558E28A24C1E00AF4A2B /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1D9558D28A24C1E00AF4A2B /* CardView.xib */; };
 		C1D9559028A24ED900AF4A2B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D9558F28A24ED900AF4A2B /* CardView.swift */; };
+		C1E87F6028AB7DEE0078F10E /* WalkThrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1E87F5F28AB7DEE0078F10E /* WalkThrough.storyboard */; };
+		C1E87F6D28AB8A100078F10E /* WalkThroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E87F6C28AB8A100078F10E /* WalkThroughPageViewController.swift */; };
+		C1E87FA728AB8F2E0078F10E /* TrendMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E87FA328AB8F160078F10E /* TrendMediaFramework.framework */; };
+		C1E87FA828AB8F2E0078F10E /* TrendMediaFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C1E87FA328AB8F160078F10E /* TrendMediaFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1E87FAB28ABA5710078F10E /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E87FAA28ABA5710078F10E /* WalkthroughContentViewController.swift */; };
+		C1E87FAD28ABAB5D0078F10E /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E87FAC28ABAB5D0078F10E /* WalkThroughViewController.swift */; };
 		C1E8F78C289A6D1C0098E93D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F78B289A6D1C0098E93D /* Alamofire */; };
 		C1E8F78F289A6D380098E93D /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F78E289A6D380098E93D /* SwiftyJSON */; };
 		C1E8F792289A72900098E93D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C1E8F791289A72900098E93D /* Kingfisher */; };
 		C1E8F795289A73690098E93D /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F793289A73690098E93D /* InfoTableViewCell.swift */; };
 		C1E8F796289A73690098E93D /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E8F794289A73690098E93D /* InfoTableViewCell.xib */; };
-		C1E8F799289A778C0098E93D /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */; };
 		C1F1626128A4E4A100F44947 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F1626028A4E4A100F44947 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C1E87FA228AB8F160078F10E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1E87F9D28AB8F160078F10E /* TrendMediaFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1E87F7828AB8DE40078F10E;
+			remoteInfo = TrendMediaFramework;
+		};
+		C1E87FA428AB8F160078F10E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1E87F9D28AB8F160078F10E /* TrendMediaFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C1E87F8228AB8DE40078F10E;
+			remoteInfo = TrendMediaFrameworkTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C1E87FA928AB8F2E0078F10E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C1E87FA828AB8F2E0078F10E /* TrendMediaFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C10CE51728A500C300B9834D /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
@@ -65,9 +101,13 @@
 		C1D9558B28A2499600AF4A2B /* NetflixTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixTableViewCell.swift; sourceTree = "<group>"; };
 		C1D9558D28A24C1E00AF4A2B /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		C1D9558F28A24ED900AF4A2B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C1E87F5F28AB7DEE0078F10E /* WalkThrough.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalkThrough.storyboard; sourceTree = "<group>"; };
+		C1E87F6C28AB8A100078F10E /* WalkThroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughPageViewController.swift; sourceTree = "<group>"; };
+		C1E87F9D28AB8F160078F10E /* TrendMediaFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TrendMediaFramework.xcodeproj; path = ../../Assignments/TrendMediaFramework/TrendMediaFramework.xcodeproj; sourceTree = "<group>"; };
+		C1E87FAA28ABA5710078F10E /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		C1E87FAC28ABAB5D0078F10E /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		C1E8F793289A73690098E93D /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		C1E8F794289A73690098E93D /* InfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
-		C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
 		C1F1626028A4E4A100F44947 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E87FA728AB8F2E0078F10E /* TrendMediaFramework.framework in Frameworks */,
 				C1E8F792289A72900098E93D /* Kingfisher in Frameworks */,
 				C1E8F78F289A6D380098E93D /* SwiftyJSON in Frameworks */,
 				C1E8F78C289A6D1C0098E93D /* Alamofire in Frameworks */,
@@ -97,6 +138,8 @@
 		C13497A82899F6CE00F7D548 = {
 			isa = PBXGroup;
 			children = (
+				C1E87F9D28AB8F160078F10E /* TrendMediaFramework.xcodeproj */,
+				C1E87F5E28AB7D8A0078F10E /* WalkThrough */,
 				C10CE51628A5008600B9834D /* Struct */,
 				C1B387D928A38D5800DCC189 /* Network */,
 				C1CF0F0728A247C5001447F0 /* Netflix */,
@@ -117,7 +160,6 @@
 		C13497B32899F6CE00F7D548 /* TrendMediaDB */ = {
 			isa = PBXGroup;
 			children = (
-				C1E8F797289A770B0098E93D /* Protocol */,
 				C13497D12899FA9800F7D548 /* Key */,
 				C13497B42899F6CE00F7D548 /* AppDelegate.swift */,
 				C13497B62899F6CE00F7D548 /* SceneDelegate.swift */,
@@ -168,12 +210,24 @@
 			path = Netflix;
 			sourceTree = "<group>";
 		};
-		C1E8F797289A770B0098E93D /* Protocol */ = {
+		C1E87F5E28AB7D8A0078F10E /* WalkThrough */ = {
 			isa = PBXGroup;
 			children = (
-				C1E8F798289A778C0098E93D /* ReusableViewProtocol.swift */,
+				C1E87F5F28AB7DEE0078F10E /* WalkThrough.storyboard */,
+				C1E87FAC28ABAB5D0078F10E /* WalkThroughViewController.swift */,
+				C1E87FAA28ABA5710078F10E /* WalkthroughContentViewController.swift */,
+				C1E87F6C28AB8A100078F10E /* WalkThroughPageViewController.swift */,
 			);
-			path = Protocol;
+			path = WalkThrough;
+			sourceTree = "<group>";
+		};
+		C1E87F9E28AB8F160078F10E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C1E87FA328AB8F160078F10E /* TrendMediaFramework.framework */,
+				C1E87FA528AB8F160078F10E /* TrendMediaFrameworkTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +240,7 @@
 				C13497AD2899F6CE00F7D548 /* Sources */,
 				C13497AE2899F6CE00F7D548 /* Frameworks */,
 				C13497AF2899F6CE00F7D548 /* Resources */,
+				C1E87FA928AB8F2E0078F10E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,12 +287,35 @@
 			);
 			productRefGroup = C13497B22899F6CE00F7D548 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C1E87F9E28AB8F160078F10E /* Products */;
+					ProjectRef = C1E87F9D28AB8F160078F10E /* TrendMediaFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C13497B02899F6CE00F7D548 /* TrendMediaDB */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C1E87FA328AB8F160078F10E /* TrendMediaFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TrendMediaFramework.framework;
+			remoteRef = C1E87FA228AB8F160078F10E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C1E87FA528AB8F160078F10E /* TrendMediaFrameworkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TrendMediaFrameworkTests.xctest;
+			remoteRef = C1E87FA428AB8F160078F10E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C13497AF2899F6CE00F7D548 /* Resources */ = {
@@ -249,6 +327,7 @@
 				C13497C92899F7CC00F7D548 /* .gitignore in Resources */,
 				C13497C12899F6CF00F7D548 /* LaunchScreen.storyboard in Resources */,
 				C1D9558E28A24C1E00AF4A2B /* CardView.xib in Resources */,
+				C1E87F6028AB7DEE0078F10E /* WalkThrough.storyboard in Resources */,
 				C13497BE2899F6CF00F7D548 /* Assets.xcassets in Resources */,
 				C13497BC2899F6CE00F7D548 /* Main.storyboard in Resources */,
 			);
@@ -265,14 +344,16 @@
 				C10CE51A28A500D400B9834D /* TheaterList.swift in Sources */,
 				C13497B92899F6CE00F7D548 /* ViewController.swift in Sources */,
 				C13DBAD3289BE27B00236586 /* DetailTableViewController.swift in Sources */,
+				C1E87FAD28ABAB5D0078F10E /* WalkThroughViewController.swift in Sources */,
 				C13497D32899FABB00F7D548 /* Example1.swift in Sources */,
+				C1E87FAB28ABA5710078F10E /* WalkthroughContentViewController.swift in Sources */,
 				C13497B52899F6CE00F7D548 /* AppDelegate.swift in Sources */,
 				C13497B72899F6CE00F7D548 /* SceneDelegate.swift in Sources */,
 				C1E8F795289A73690098E93D /* InfoTableViewCell.swift in Sources */,
 				C16618DE289C21330050D5D1 /* CastTableViewCell.swift in Sources */,
+				C1E87F6D28AB8A100078F10E /* WalkThroughPageViewController.swift in Sources */,
 				C1581AB7289D0A38009AA561 /* WebViewController.swift in Sources */,
 				C16618DC289C13A30050D5D1 /* OverViewTableViewCell.swift in Sources */,
-				C1E8F799289A778C0098E93D /* ReusableViewProtocol.swift in Sources */,
 				C1B387DB28A38E0A00DCC189 /* TMDBAPIManager.swift in Sources */,
 				C13497CD2899F8A000F7D548 /* APIKey.swift in Sources */,
 				C13497CF2899F9C300F7D548 /* Constant.swift in Sources */,

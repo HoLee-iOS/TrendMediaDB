@@ -9,10 +9,7 @@ import UIKit
 
 import Kingfisher
 
-class NetflixViewController: UIViewController, ReusableViewProtocol {
-    
-    static var resuseIdentifier: String = "NetflixViewController"
-    
+class NetflixViewController: UIViewController {    
 
     @IBOutlet weak var mainTableView: UITableView!
     

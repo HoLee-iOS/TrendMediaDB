@@ -11,9 +11,9 @@ import Alamofire
 import SwiftyJSON
 import Kingfisher
 
-class DetailTableViewController: UITableViewController, ReusableViewProtocol {
-    
-    static var resuseIdentifier: String = "DetailTableViewController"
+import TrendMediaFramework
+
+class DetailTableViewController: UITableViewController {
 
     @IBOutlet weak var detailHeaderImage: UIImageView!
     @IBOutlet weak var detailPosterImage: UIImageView!
@@ -33,6 +33,8 @@ class DetailTableViewController: UITableViewController, ReusableViewProtocol {
     var detailFaces: [URL] = []
     var detailJobs: [String] = []
     
+    var isExpended = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +47,8 @@ class DetailTableViewController: UITableViewController, ReusableViewProtocol {
         
         self.navigationController?.navigationBar.tintColor = .black
         navigationItem.title = "출연/제작"
+        
+        tableView.rowHeight = UITableView.automaticDimension
         
     }
     
@@ -66,17 +70,30 @@ class DetailTableViewController: UITableViewController, ReusableViewProtocol {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: OverViewTableViewCell.resuseIdentifier, for: indexPath) as! OverViewTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: OverViewTableViewCell.reuseIdentifier, for: indexPath) as! OverViewTableViewCell
             
             cell.overViewLabel.text = detailOverViews[indexPath.row]
-            cell.overViewLabel.numberOfLines = 2
-            cell.overViewButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
-            cell.overViewButton.tintColor = .black
+            cell.overViewLabel.numberOfLines = isExpended ? 0 : 2
+            
+            cell.configureButton()
+            
+            if self.isExpended {
+                cell.overViewButton.setImage(UIImage(systemName: "chevron.up"), for: .normal)
+            } else {
+                cell.overViewButton.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+            }
+            
+            cell.overViewButtonTapped = {
+                self.isExpended = !self.isExpended
+                print(self.isExpended)
+                self.tableView.reloadData()
+            }
+            
             return cell
             
         } else if indexPath.section == 1  {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: CastTableViewCell.resuseIdentifier, for: indexPath) as! CastTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CastTableViewCell.reuseIdentifier, for: indexPath) as! CastTableViewCell
             
             cell.castName.text = detailActors[indexPath.row]
             cell.castName.font = .systemFont(ofSize: 14)
@@ -92,7 +109,7 @@ class DetailTableViewController: UITableViewController, ReusableViewProtocol {
             
         } else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: CastTableViewCell.resuseIdentifier, for: indexPath) as! CastTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CastTableViewCell.reuseIdentifier, for: indexPath) as! CastTableViewCell
             
             cell.castName.text = detailCrews[indexPath.row]
             cell.castName.font = .systemFont(ofSize: 14)
@@ -109,6 +126,9 @@ class DetailTableViewController: UITableViewController, ReusableViewProtocol {
         
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return indexPath.section == 0 ? UITableView.automaticDimension : 100
+    }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         

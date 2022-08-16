@@ -10,9 +10,10 @@ import MapKit
 
 import CoreLocation
 
-class MapViewController: UIViewController, ReusableViewProtocol {
-    
-    static var resuseIdentifier: String = "MapViewController"
+import Alamofire
+import SwiftyJSON
+
+class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -163,8 +164,6 @@ class MapViewController: UIViewController, ReusableViewProtocol {
         
     }
     
-    
-    
     func showRequestLocationServiceAlert() {
         let requestLocationServiceAlert = UIAlertController(title: "위치정보 이용", message: "위치 서비스를 사용할 수 없습니다. 기기의 '설정>개인정보 보호'에서 위치 서비스를 켜주세요.", preferredStyle: .alert)
         let goSetting = UIAlertAction(title: "설정으로 이동", style: .destructive) { _ in
@@ -188,6 +187,7 @@ class MapViewController: UIViewController, ReusableViewProtocol {
 extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         if let coordinate = locations.last?.coordinate {
             setRegionAndAnnotation(center: coordinate)
         }
