@@ -54,17 +54,23 @@ class ViewController: UIViewController {
     
     @objc func menuClicked() {
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: NetflixViewController.reuseIdentifier) as! NetflixViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        //화면전환 메서드로 구현
+        transitionViewController(storyboard: "Main", viewController: NetflixViewController.self, transitionStyle: .push, completion: nil)
+        
+        //        let sb = UIStoryboard(name: "Main", bundle: nil)
+        //        let vc = sb.instantiateViewController(withIdentifier: NetflixViewController.reuseIdentifier) as! NetflixViewController
+        //        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
     @objc func searchClicked() {
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: MapViewController.reuseIdentifier) as! MapViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        //화면전환 메서드로 구현
+        transitionViewController(storyboard: "Main", viewController: MapViewController.self, transitionStyle: .push, completion: nil)
+        
+        //        let sb = UIStoryboard(name: "Main", bundle: nil)
+        //        let vc = sb.instantiateViewController(withIdentifier: MapViewController.reuseIdentifier) as! MapViewController
+        //        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
@@ -201,22 +207,22 @@ class ViewController: UIViewController {
         
     }
     
+    
     @objc func linkButtonClicked(_ sender: UIButton) {
         
         let indexPathRow = sender.tag
         
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: WebViewController.reuseIdentifier) as! WebViewController
-        
-        if let i = videos[movieIds[indexPathRow]] {
-            vc.destinationURL = i
+        transitionViewController(storyboard: "Main", viewController: WebViewController.self, transitionStyle: .push) { vc in
+            if let i = self.videos[self.movieIds[indexPathRow]] {
+                vc.self.destinationURL = i
+            }
+            
         }
-        
-        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
 }
+
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -317,8 +323,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if let i = jobs[movieIds[indexPath.row]] {
             vc.detailJobs = i
         }
-        
-        
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
